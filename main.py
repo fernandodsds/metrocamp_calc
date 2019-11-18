@@ -11,13 +11,23 @@ print('Starting up...')
 
 sg.ChangeLookAndFeel('LightGreen') 
 
+txtSobre = """
+A Wyden é uma instituição de ensino superior parte de um dos maiores grupos educacionais do mundo, a Adtalem Global Education, que oferece, qualidade internacional e experiência em transformar realidades por meio da educação no mundo inteiro. Oferecemos cursos de Graduação e Pós-Graduação nas modalidades presencial, semipresencial e à distância.
+"""
+
 # Menu principal
 layout =  [
             [sg.Text('Metrocamp Exatas', size=(60,1), font=('Segoe UI', 20), text_color='red')],
-            [sg.Button('Estatistica'),sg.Button('Matematica'),sg.Button('Fisica')],
-	    [sg.Exit('Sair', button_color=('white','red'))]
-
+            [sg.Button('Estatistica'),sg.Button('Matematica'),sg.Button('Fisica'),sg.Button('Sobre')],
+	          [sg.Exit('Sair', button_color=('white','red'))]
           ]
+#Layout sobre a faculdade
+layout3 =  [
+            [sg.Text('Metrocamp - Sobre', size=(60,1), font=('Segoe UI', 20), text_color='red')],
+            [sg.Text(txtSobre, size=(60,7), font=('Ariel', 12), text_color='black')],
+	          [sg.Button('Voltar')]
+
+          ]          
 #Layout dos Modulos
 layout2 =  [
             [sg.Text('Metrocamp Exatas - Estatistica', size=(60,1), font=('Segoe UI', 20), text_color='red')],
@@ -64,6 +74,15 @@ while True:
    event, values = window.Read(timeout=10)     # read with a timeout of 10 ms
    if event != sg.TIMEOUT_KEY:                 # if got a real event, print the info
         print(event, values)
+   # Clique do botao Sobre
+   if event == 'Sobre':
+        window1 = sg.Window('Exatas - Sobre',	
+                  layout=layout3,
+                   default_element_size=(12,1),
+                   font='Helvetica 18',
+                   )
+        window = window1
+
    # Clique no botão estatistica modifica para o layout 2 (layout dos modulos)
    if event == 'Estatistica':
        
