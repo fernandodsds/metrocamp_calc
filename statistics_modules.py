@@ -48,7 +48,7 @@ def mediaPonderada(n1,n2,n3):
 	nota3 = getN3(int(n3))
 
 	if nota1 != -1 and nota2 != -1 and nota3 != -1:
-		media = ((nota1 * 0.20) + (nota2 * 0.30) + (nota3 * 0.50)) / 3
+		media = ((nota1 * 0.20) + (nota2 * 0.30) + (nota3 * 0.50)) 
 		return media
 	else:
 		return None

@@ -19,13 +19,24 @@ A Wyden é uma instituição de ensino superior parte de um dos maiores grupos e
 layout =  [
             [sg.Text('Metrocamp Exatas', size=(60,1), font=('Segoe UI', 20), text_color='red')],
             [sg.Button('Estatistica'),sg.Button('Matematica'),sg.Button('Fisica'),sg.Button('Sobre')],
-	          [sg.Exit('Sair', button_color=('white','red'))]
+            [sg.Text('', size=(60,1), font=('Segoe UI', 20), text_color='red')],
+            [sg.Text('v1.0', size=(60,1), font=('Segoe UI', 10), text_color='black')],
+	          #[sg.Exit('Sair', button_color=('white','red'))]
           ]
 #Layout sobre a faculdade
 layout3 =  [
             [sg.Text('Metrocamp - Sobre', size=(60,1), font=('Segoe UI', 20), text_color='red')],
             [sg.Text(txtSobre, size=(60,7), font=('Ariel', 12), text_color='black')],
-	          [sg.Button('Voltar')]
+            [sg.Text('Desenvolvedores:', size=(60,1), font=('Ariel', 16), text_color='black')],
+            [sg.Text('Luana Santos Lima', size=(60,1), font=('Ariel', 12), text_color='black')],
+            [sg.Text('Luís Fernando Sanchez', size=(60,1), font=('Ariel', 12), text_color='black')],
+            [sg.Text('Fernando dos Santos da Silva', size=(60,1), font=('Ariel', 12), text_color='black')],
+            [sg.Text('Henrique Matheus Florêncio Pini', size=(60,1), font=('Ariel', 12), text_color='black')],
+            [sg.Text('Kaian Ferreira dos Santos', size=(60,1), font=('Ariel', 12), text_color='black')],
+            [sg.Text('', size=(60,1), font=('Segoe UI', 20), text_color='red')],                                                       
+	          [sg.Button('Voltar')],
+            [sg.Text('', size=(60,1), font=('Segoe UI', 20), text_color='red')],
+            [sg.Text('v1.0', size=(60,1), font=('Segoe UI', 10), text_color='black')],
 
           ]          
 #Layout dos Modulos
@@ -51,14 +62,16 @@ layout2 =  [
 	    [sg.Text('Modulo amplitude', size=(60,1), font=('Segoe UI', 20), text_color='red')],
 	    [sg.Text('Para utilizar o modulo passe até 10 elementos numericos separados por virgulas', size=(60,1), font=('Arial', 12), text_color='black')],
             [sg.Input(key='data1'),sg.Button('Calcular', key = 'cl_amp')],
-            [sg.Text('', size=(60,1), font=('Arial', 1812), text_color='black',key = 'amplitude')],
+            [sg.Text('', size=(60,1), font=('Arial', 12), text_color='black',key = 'amplitude')],
 	    #Template a variancia
 	    [sg.Text('Modulo variancia', size=(60,1), font=('Segoe UI', 20), text_color='red')],
 	    [sg.Text('Para utilizar o modulo passe até 10 elementos numericos separados por virgulas', size=(60,1), font=('Arial', 12), text_color='black')],
             [sg.Input(key='data2'),sg.Button('Calcular', key = 'cl_var')],
             [sg.Text('', size=(60,1), font=('Arial', 12), text_color='black',key = 'varianca')],
 	    [sg.Text('', size=(60,1), font=('Arial', 18), text_color='black')],
-	    [sg.Button('Voltar')]
+	    [sg.Button('Voltar')],
+      [sg.Text('', size=(60,1), font=('Segoe UI', 20), text_color='red')],
+      [sg.Text('v1.0', size=(60,1), font=('Segoe UI', 10), text_color='black')],
           ]
 
 # Cria menu principal
@@ -147,8 +160,8 @@ while True:
                    font='Helvetica 18',
                    )
         window = window1
-   if event in (None, 'Exit', 'Sair'):
-        break
+   #if event in (None, 'Exit', 'Sair'):
+   #     break
         
  
 
