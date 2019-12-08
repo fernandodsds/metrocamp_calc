@@ -162,10 +162,6 @@ while True:
         window = window1
    #if event in (None, 'Exit', 'Sair'):
    #     break
-        
- 
-
-# Exiting the program
-window.Close()    # fecha o programa
-window1.Close()
+   if event == None:
+     break     
 print('Completed shutdown')
